@@ -7,11 +7,15 @@
     <LoginDiv @transferUser="getUser"></LoginDiv>
     <p>用户名为:{{user}}</p>
     <p>密码为:{{pass}}</p>
+
+    <router-link to="/login">login</router-link>
+    <router-link to="/about">About</router-link>
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/helloworld/HelloWorld'
 import headerDiv from "./components/header/header";
 import LoginDiv from "./components/login/login";
 

@@ -1,25 +1,38 @@
 import Vue from 'vue'
 import VueRouter from "vue-router";
 
+// 引入组件
+import HOME from "../components/home/home.vue";
 import HEADER from "../components/header/header.vue";
+import ABOUT from "../components/about/about.vue";
+import LOGIN from "../components/login/login.vue";
 
-Vue.use(VueRouter)
+// 告诉 vue 使用 VueRouter
+Vue.use(VueRouter);
 
-const routers = [{
-    path: '/header',
-    name: 'header',
-    component: HEADER
-  },
-  {
-    path: '/',
-    component: HEADER
-  }
+const routes = [
+    {
+        path: '/',
+        component: HOME
+    },
+    {
+        path: '/login',
+        component: LOGIN
+    },
+    {
+        path: '/about',
+        component: ABOUT
+    }
 ]
 
-const router = new VueRouter({
-  mode: 'history',
-  routes
+var router = new VueRouter({
+    mode: 'history',
+    routes
 })
+
+export default router;
+
+
 
 /* 
 在创建的 router 对象中，如果不配置 mode，就会使用默认的 hash 模式，该模式下会将路径格式化为 #! 开头。

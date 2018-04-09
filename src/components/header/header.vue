@@ -4,6 +4,7 @@
       <ul class="nav">
           <li v-for="nav in navs" :key="nav.id">{{nav.li}}</li>
       </ul>
+
   </header>
 </template>
 
